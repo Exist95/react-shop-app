@@ -5,6 +5,7 @@ import LogoPath from '@/assets/colorful.svg';
 import { useRouter } from 'next/navigation';
 
 import styles from './Auth.module.scss';
+import { Loader } from '@/components/loader/Loader';
 
 const LoginClient = () => {
   const [email, setEmail] = useState('');
@@ -22,24 +23,25 @@ const LoginClient = () => {
     setIsLoading(true);
   };
 
-  const signInWithGoogle = () => {
-    //커밋테스트
-  };
+  const signInWithGoogle = () => {};
 
   return (
-    <section className={styles.page}>
-      <div className={styles.container}>
-        <h1 className={styles.logo}>
-          <Image src={LogoPath} alt='logo' />
-        </h1>
+    <>
+      <Loader />
+      <section className={styles.page}>
+        <div className={styles.container}>
+          <h1 className={styles.logo}>
+            <Image src={LogoPath} alt='logo' />
+          </h1>
 
-        <form className={styles.form} onSubmit={loginUser}>
-          <div className={styles.group}></div>
+          <form className={styles.form} onSubmit={loginUser}>
+            <div className={styles.group}></div>
 
-          <div className={styles.buttonGroup}></div>
-        </form>
-      </div>
-    </section>
+            <div className={styles.buttonGroup}></div>
+          </form>
+        </div>
+      </section>
+    </>
   );
 };
 

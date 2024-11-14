@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Icon = () => {
-  return <div>icon</div>;
+  return <div>iconqweqwe</div>;
 };
 
 export default Icon;

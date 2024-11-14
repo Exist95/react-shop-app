@@ -23,6 +23,7 @@ const Input = ({
 }) => {
   const [inputValue, setinputValue] = useState(value ? value : '');
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+
   const checkType = () => {
     if (email) {
       return 'email';
@@ -33,6 +34,7 @@ const Input = ({
     }
     return 'text';
   };
+
   const handleChange = (e) => {
     setinputValue(e.target.value);
     onChange(e);
@@ -58,7 +60,7 @@ const Input = ({
         {icon ? <Icon /> : null}
         <input
           id={id}
-          type={checkType}
+          type={checkType()}
           name={name}
           className={classNames(styles.input)}
           placeholder={placehodler}

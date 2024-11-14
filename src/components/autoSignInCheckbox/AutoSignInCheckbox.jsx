@@ -1,6 +1,5 @@
 import React from 'react';
-import styles from './autoSignInCheckbox.module.scss';
-import Tooltip from '../tooltip/Tooltip';
+import styles from './AutoSignInCheckbox.module.scss';
 import Checkbox from '../checkbox/Checkbox';
 
 const AutoSignInCheckbox = ({
@@ -21,7 +20,6 @@ const AutoSignInCheckbox = ({
         onChange={onChange}
         {...restProps}
       />
-      {checked && <Tooltip />}
     </div>
   );
 };

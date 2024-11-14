@@ -51,6 +51,7 @@ const Input = ({
       >
         {label}
       </label>
+
       <div
         className={classNames(
           styles.inputWrapper,
@@ -70,6 +71,7 @@ const Input = ({
           onChange={handleChange}
           {...restProps}
         />
+
         {password ? (
           <button
             type='button'

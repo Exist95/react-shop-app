@@ -8,6 +8,7 @@ import styles from './Auth.module.scss';
 import { Loader } from '@/components/loader/Loader';
 import Input from '@/components/input/Input';
 import AutoSignInCheckbox from '@/components/autoSignInCheckbox/autoSignInCheckbox';
+import Divider from '@/components/divider/Divider';
 
 const LoginClient = () => {
   const [email, setEmail] = useState('');
@@ -69,7 +70,12 @@ const LoginClient = () => {
               <div>비밀번호 수정</div>
             </div>
 
-            <div className={styles.buttonGroup}></div>
+            <div className={styles.buttonGroup}>
+              Button
+              <Divider />
+              Button
+              <Divider />
+            </div>
           </form>
         </div>
       </section>

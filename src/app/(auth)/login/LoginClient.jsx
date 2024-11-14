@@ -7,6 +7,7 @@ import { useRouter } from 'next/navigation';
 import styles from './Auth.module.scss';
 import { Loader } from '@/components/loader/Loader';
 import Input from '@/components/input/Input';
+import AutoSignInCheckbox from '@/components/autoSignInCheckbox/autoSignInCheckbox';
 
 const LoginClient = () => {
   const [email, setEmail] = useState('');
@@ -58,7 +59,12 @@ const LoginClient = () => {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <div className={styles.group}></div>
+            <div className={styles.group}>
+              <AutoSignInCheckbox
+                checked={isAutoLogin}
+                onChange={(e) => setIsAutoLogin(e.target.checked)}
+              />
+            </div>
 
             <div className={styles.buttonGroup}></div>
           </form>
